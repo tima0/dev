@@ -1,0 +1,17 @@
+<mat-list>
+  <h3 matSubheader>
+    Easy order view
+
+    <div *ngIf="nbOfPizzas$ | async as nbOfPizzas">
+      <span [ngPlural]="nbOfPizzas">:
+        <ng-template ngPluralCase="=1">1 pizza only</ng-template>
+        <ng-template ngPluralCase="other">{{ nbOfPizzas }} pizzas</ng-template>
+      </span>
+    </div>
+  </h3>
+
+  <mat-list-item *ngFor="let pizza of orderSummary$ | async">
+    <h4 matLine class="pizza-name">{{ pizza.pizzaName }}</h4>
+    <p matLine class="how-many-per-size">{{ howManyPerSize(pizza) }}</p>
+  </mat-list-item>
+</mat-list>

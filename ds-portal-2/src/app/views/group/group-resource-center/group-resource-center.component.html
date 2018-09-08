@@ -1,0 +1,274 @@
+<!--Double navigation-->
+<header>
+
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+    <!-- Side navigation links -->
+
+
+    <logo>
+      <li>
+        <div class="logo-wrapper waves-ripple">
+          <a href="/dashboards/group">
+            <img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0">
+          </a>
+
+        </div>
+      </li>
+    </logo>
+    <!-- <li> -->
+    <links>
+
+      <ul class="collapsible collapsible-accordion">
+
+        <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+          <mdb-item>
+            <mdb-item-head mdbRippleRadius class="black border border-white border-right-0 border-left-0 text-white">
+              <i class="fa fa-user-circle text-white"> Group</i>
+            </mdb-item-head>
+            <mdb-item-body class="grey">
+              <ul>
+                <li>
+                  <a routerLink="/group/group-profile" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>My Profile</a>
+                </li>
+                <li>
+                  <a routerLink="/group/message-center" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Message Center</a>
+                </li>
+                <li>
+                  <a routerLink="/pages/login" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Log Off</a>
+                </li>
+              </ul>
+            </mdb-item-body>
+          </mdb-item>
+          <!-- Simple link -->
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-details">
+                <li class="text-black-50 font-weight-bold">Group Details</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/plans">
+                <li class="text-black-50 font-weight-bold">Plans</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/enrollment">
+                <li class="text-black-50 font-weight-bold">Enrollment</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/billing">
+                <li class="text-black-50 font-weight-bold">Billing</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-docs">
+                <li class="text-black-50 font-weight-bold">Group Docs</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/subgroups">
+                <li class="text-black-50 font-weight-bold">Subgroups</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/resource-center">
+                <li class="text-black-50 font-weight-bold">Resource Center</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+        </mdb-squeezebox>
+      </ul>
+      <!-- </li> -->
+      <!--/. Side navigation links -->
+    </links>
+    <!-- <div class="sidenav"></div> -->
+  </mdb-sidenav>
+  <!--/. Sidebar navigation -->
+
+  <!--/. Navbar -->
+  <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <logo>
+      <!-- <img src="../../../../assets/img/favicon-32x32.png">  -->
+    </logo>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbRippleRadius>
+            <i class="fa fa-envelope"></i>
+            <span class="clearfix d-none d-sm-inline-block"></span>
+          </a>
+        </li>
+
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->
+
+
+<div class="col-md-12">
+  <h1>Resource Center</h1>
+  <p>Welcome to the Group Resource Center. This page will let you access forms, documents and marketing materials.</p>
+  <br>
+  <p>The links below allow you to download forms, brochures and flyers directly to your device to save and/or print. You can also contact your Account
+    Executive if you have any questions or issues you need to resolve.</p>
+  <hr>
+  <!--Card-->
+  <div class="card card-cascade">
+
+    <!--Card image-->
+    <div class="card-header grey">
+      <h4 class="d-flex justify-content-center text-white">Documents</h4>
+    </div>
+    <!--/Card image-->
+
+    <!--Card content-->
+    <div class="card-body text-center">
+
+
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>Enrollment Form
+          <img src="../../../../assets/img/icon-download-cloud.png" class="img-fluid">
+        </a>
+        <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>Subscriber Form
+          <img src="../../../../assets/img/icon-download-cloud.png" class="img-fluid">
+        </a>
+      </div>
+
+
+
+
+    </div>
+    <!--/.Card content-->
+
+  </div>
+  <!--/.Card-->
+  <hr>
+  <!--Card-->
+  <div class="card card-cascade">
+
+    <!--Card image-->
+    <div class="card-header grey">
+      <h4 class="d-flex justify-content-center text-white">FAQs</h4>
+    </div>
+    <!--/Card image-->
+
+    <!--Card content-->
+    <div class="card-body text-center">
+
+      <!--Accordion wrapper-->
+      <mdb-squeezebox [multiple]="false" aria-multiselectable="true">
+        <mdb-item *ngFor="let item of itemsList">
+          <mdb-item-head> {{ item.title }} </mdb-item-head>
+          <mdb-item-body> {{ item.description }} </mdb-item-body>
+        </mdb-item>
+      </mdb-squeezebox>
+      <!--/.Accordion wrapper-->
+
+
+
+    </div>
+    <!--/.Card content-->
+
+  </div>
+  <!--/.Card-->
+  <hr>
+
+  <!--Section: Team v.3-->
+  <section class="section team-section pb-3">
+
+
+    <!--Grid row-->
+    <div class="row mb-lg-4 center-on-small-only">
+
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-r">
+        <div class="card">
+          <div class="card-body">
+            <div class="col-md-6 float-left">
+              <div class="avatar">
+                <img src="../../../../assets/img/Courtney-Rider.jpg" class="rounded-circle img-responsive z-depth-1" alt="Fourth sample avatar image">
+              </div>
+            </div>
+
+            <div class="col-md-6 float-right">
+              <h4>
+                <strong>Courtney Rider</strong>
+              </h4>
+              <h6 class="font-bold grey-text mb-4">Sales Representative</h6>
+              <p class="grey-text">courtneyr@dentalselect.com</p>
+              <p class="grey-text">512-343-2616</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-r">
+        <div class="card">
+          <div class="card-body">
+            <div class="col-md-6 float-left">
+              <div class="avatar">
+                <img src="../../../../assets/img/Hope-Eastman.jpg" class="rounded-circle img-responsive z-depth-1" alt="Second sample avatar image">
+              </div>
+            </div>
+
+            <div class="col-md-6 float-right">
+              <h4>
+                <strong>Hope Eastman</strong>
+              </h4>
+              <h6 class="font-bold grey-text mb-4">Account Manager</h6>
+              <p class="grey-text">hopee@dentalselect.com</p>
+              <p class="grey-text">801-555-2616</p>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Grid column -->
+
+    </div>
+    <!--Grid row-->
+
+
+
+  </section>
+  <!--Section: Team v.3-->

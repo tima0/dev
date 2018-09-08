@@ -1,0 +1,41 @@
+<form [formGroup]="identificationForm" fxLayout="column" (ngSubmit)="onSubmit(identificationForm)">
+  <mat-form-field>
+    <input
+      placeholder="Github username"
+      required
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      matInput
+      formControlName="username"
+    >
+
+    <span matPrefix>
+      <mat-icon svgIcon="github" color="accent"></mat-icon>
+    </span>
+
+    <mat-hint align="end">for picture, otherwise any username</mat-hint>
+  </mat-form-field>
+
+  <button
+    type="submit"
+    *ngIf="identificationForm.valid || (isIdentifying$ | async)"
+    mat-button
+    color="primary"
+    [disabled]="(isIdentifying$ | async)"
+  >
+    <div *ngIf="!(isIdentifying$ | async)">
+      I'm hungry, let's order
+    </div>
+
+    <div *ngIf="isIdentifying$ | async" fxLayout="row" fxLayoutAlign="center center">
+      Connecting
+      <mat-progress-spinner
+        mode="indeterminate"
+        [diameter]="20"
+        [strokeWidth]="2"
+      ></mat-progress-spinner>
+    </div>
+  </button>
+</form>

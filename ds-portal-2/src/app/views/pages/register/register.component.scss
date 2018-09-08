@@ -1,0 +1,21 @@
+$introBg: "/assets/img/login-bg.jpg";
+.intro-2 {
+    background: url($introBg) no-repeat center center;
+    background-size: cover;
+}
+
+.card {
+    border-radius: 5%;
+    width: 33vw;
+    position: absolute;
+    // transform: translateY(50%);
+}
+
+.dark-grey-text {
+    color: #4f4f4f !important;
+}
+
+.intro {
+    min-height: 100vh;
+    position: relative;
+}

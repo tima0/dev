@@ -1,0 +1,55 @@
+{
+  "plugins": [
+    "flowtype",
+    "flowtype-errors"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "firebase": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }
+    }
+  },
+  "rules": {
+    // Plugins
+    "import/prefer-default-export": "off",  // TODO
+    "flowtype-errors/show-errors": "error",
+    "flowtype-errors/show-warnings": "warn",
+    "flowtype-errors/enforce-min-coverage": ["error", 50],
+
+    // Possible Errors
+
+    // Best Practices
+    "no-param-reassign": ["error", { "props": false }],
+
+    // Variables
+
+    // Node.js and CommonJS
+
+    // Stylistic Issues
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "object-curly-newline": ["error", { "consistent": true }],
+
+    // JS.Next
+
+  }
+}

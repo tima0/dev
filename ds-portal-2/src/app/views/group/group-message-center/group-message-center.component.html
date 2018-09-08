@@ -1,0 +1,184 @@
+<!--Double navigation-->
+<header>
+
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+    <!-- Side navigation links -->
+
+
+    <logo>
+      <li>
+        <div class="logo-wrapper waves-ripple">
+          <a href="/dashboards/group">
+            <img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0">
+          </a>
+
+        </div>
+      </li>
+    </logo>
+    <!-- <li> -->
+    <links>
+
+      <ul class="collapsible collapsible-accordion">
+
+        <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+          <mdb-item>
+            <mdb-item-head mdbRippleRadius class="black border border-white border-right-0 border-left-0 text-white">
+              <i class="fa fa-user-circle text-white"> Group</i>
+            </mdb-item-head>
+            <mdb-item-body class="grey">
+              <ul>
+                <li>
+                  <a routerLink="/group/group-profile" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>My Profile</a>
+                </li>
+                <li>
+                  <a routerLink="/group/message-center" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Message Center</a>
+                </li>
+                <li>
+                  <a routerLink="/pages/login" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Log Off</a>
+                </li>
+              </ul>
+            </mdb-item-body>
+          </mdb-item>
+          <!-- Simple link -->
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-details">
+                <li class="text-black-50 font-weight-bold">Group Details</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/plans">
+                <li class="text-black-50 font-weight-bold">Plans</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/enrollment">
+                <li class="text-black-50 font-weight-bold">Enrollment</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/billing">
+                <li class="text-black-50 font-weight-bold">Billing</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-docs">
+                <li class="text-black-50 font-weight-bold">Group Docs</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/subgroups">
+                <li class="text-black-50 font-weight-bold">Subgroups</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/resource-center">
+                <li class="text-black-50 font-weight-bold">Resource Center</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+        </mdb-squeezebox>
+      </ul>
+      <!-- </li> -->
+      <!--/. Side navigation links -->
+    </links>
+    <!-- <div class="sidenav"></div> -->
+  </mdb-sidenav>
+  <!--/. Sidebar navigation -->
+
+  <!--/. Navbar -->
+  <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <logo>
+      <!-- <img src="../../../../assets/img/favicon-32x32.png">  -->
+    </logo>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbRippleRadius>
+            <i class="fa fa-envelope"></i>
+            <span class="clearfix d-none d-sm-inline-block"></span>
+          </a>
+        </li>
+
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->
+
+
+
+<div class="col-md-12">
+
+
+  <!--Card-->
+  <div class="card card-cascade">
+
+    <!--Card image-->
+    <div class="card-header grey">
+      <h4 class="d-flex justify-content-center text-white">MESSAGE CENTER</h4>
+    </div>
+    <!--/Card image-->
+
+    <!--Card content-->
+    <div class="card-body text-center">
+
+      <!--Accordion wrapper-->
+      <mdb-squeezebox [multiple]="false" aria-multiselectable="true">
+        <mdb-item *ngFor="let item of itemsList">
+          <mdb-item-head> {{ item.title }} </mdb-item-head>
+          <mdb-item-body> {{ item.description }} </mdb-item-body>
+        </mdb-item>
+      </mdb-squeezebox>
+      <!--/.Accordion wrapper-->
+
+
+
+    </div>
+    <!--/.Card content-->
+
+  </div>
+  <!--/.Card-->
+
+
+
+
+
+
+
+</div>

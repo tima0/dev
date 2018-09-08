@@ -1,0 +1,362 @@
+<!--Double navigation-->
+<header>
+
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+    <!-- Side navigation links -->
+
+
+    <logo>
+      <li>
+        <div class="logo-wrapper waves-ripple">
+          <a href="/dashboards/group">
+            <img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0">
+          </a>
+
+        </div>
+      </li>
+    </logo>
+    <!-- <li> -->
+    <links>
+
+      <ul class="collapsible collapsible-accordion">
+
+        <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+          <mdb-item>
+            <mdb-item-head mdbRippleRadius class="black border border-white border-right-0 border-left-0 text-white">
+              <i class="fa fa-user-circle text-white"> Group</i>
+            </mdb-item-head>
+            <mdb-item-body class="grey">
+              <ul>
+                <li>
+                  <a routerLink="/group/group-profile" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>My Profile</a>
+                </li>
+                <li>
+                  <a routerLink="/group/message-center" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Message Center</a>
+                </li>
+                <li>
+                  <a routerLink="/pages/login" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Log Off</a>
+                </li>
+              </ul>
+            </mdb-item-body>
+          </mdb-item>
+          <!-- Simple link -->
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-details">
+                <li class="text-black-50 font-weight-bold">Group Details</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/plans">
+                <li class="text-black-50 font-weight-bold">Plans</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/enrollment">
+                <li class="text-black-50 font-weight-bold">Enrollment</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/billing">
+                <li class="text-black-50 font-weight-bold">Billing</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-docs">
+                <li class="text-black-50 font-weight-bold">Group Docs</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/subgroups">
+                <li class="text-black-50 font-weight-bold">Subgroups</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/resource-center">
+                <li class="text-black-50 font-weight-bold">Resource Center</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+        </mdb-squeezebox>
+      </ul>
+      <!-- </li> -->
+      <!--/. Side navigation links -->
+    </links>
+    <!-- <div class="sidenav"></div> -->
+  </mdb-sidenav>
+  <!--/. Sidebar navigation -->
+
+  <!--/. Navbar -->
+  <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <logo>
+      <!-- <img src="../../../../assets/img/favicon-32x32.png">  -->
+    </logo>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbRippleRadius>
+            <i class="fa fa-envelope"></i>
+            <span class="clearfix d-none d-sm-inline-block"></span>
+          </a>
+        </li>
+
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->
+
+
+
+<div class="row my-5">
+  <div class="col-md-3">
+
+
+    <!--Card-->
+    <div class="card">
+
+      <!--Card image-->
+      <div class="waves-light d-flex justify-content-center" mdbWavesEffect>
+        <img src="../../../../assets/img/Jared-Tuia.jpg" class="rounded-circle img-responsive z-depth-1">
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+      <!--/Card image-->
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title mb-2 font-bold">
+          <strong>Broker.Name</strong>
+        </h4>
+        <h5 class="grey-text">
+          <strong>Broker</strong>
+        </h5>
+
+
+      </div>
+      <!--/.Card content-->
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+
+  <div class="col-md-9">
+
+
+    <!--Card-->
+    <div class="card card-cascade">
+
+      <!--Card image-->
+      <div class="card-header grey">
+        <h4 class="d-flex justify-content-center text-white">Edit Personal Info:</h4>
+      </div>
+      <!--/Card image-->
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Contact Form-->
+        <form>
+
+          <!--First row-->
+          <div class="row">
+            <!--First column-->
+            <div class="col-md-4">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form12" class="form-control">
+                <label class="active" for="form12">Email Address</label>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col-md-4">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form13" class="form-control">
+                <label class="active" for="form13">Password</label>
+              </div>
+            </div>
+
+            <!--Third column-->
+            <div class="col-md-4">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form14" class="form-control">
+                <label class="active" for="form14">Confirm Password</label>
+              </div>
+            </div>
+          </div>
+          <!--/.First row-->
+
+          <!--Second row-->
+          <div class="row">
+            <!--First column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form15" class="form-control">
+                <label for="form15">Security Question</label>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form16" class="form-control">
+                <label for="form16">Security Question Answer</label>
+              </div>
+            </div>
+          </div>
+          <!--/.Second row-->
+
+          <!--Third row-->
+          <div class="row">
+            <!--First column-->
+            <div class="col-md-4">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form17" class="form-control">
+                <label class="active" for="form17">First Name</label>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col-md-4">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form18" class="form-control">
+                <label class="active" for="form18">Middle Name</label>
+              </div>
+            </div>
+
+            <!--Third column-->
+            <div class="col-md-4">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form19" class="form-control">
+                <label for="form19">Last Name</label>
+              </div>
+            </div>
+          </div>
+          <!--/.Third row-->
+
+          <!--Fourth row-->
+          <div class="row">
+            <!--First column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form20" class="form-control">
+                <label for="form20">Phone Number</label>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form21" class="form-control">
+                <label for="form21">Gender</label>
+              </div>
+            </div>
+          </div>
+          <!--/.Fourth row-->
+          <div class="card-header grey">
+            <h4 class="d-flex justify-content-center text-white">Edit Financial Account Info:</h4>
+          </div>
+
+          <!--Fifth row-->
+          <div class="row">
+            <!--First column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form22" class="form-control">
+                <label class="active" for="form22">Financial Institution</label>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form23" class="form-control">
+                <label class="active" for="form23">Name on Account</label>
+              </div>
+            </div>
+          </div>
+          <!--/.Fifth row-->
+
+          <!--Sixth row-->
+          <div class="row">
+            <!--First column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form24" class="form-control">
+                <label for="form24">Account Type</label>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col-md-6">
+              <div class="md-form">
+                <input placeholder="" mdbInputDirective type="text" id="form25" class="form-control">
+                <label for="form25">Account Number</label>
+              </div>
+            </div>
+          </div>
+          <!--/.Sixth row-->
+
+          <div class="text-center">
+            <button type="button" class="btn teal btn-rounded waves-light" mdbWavesEffect>Update</button>
+          </div>
+
+        </form>
+
+      </div>
+      <!--/.Card content-->
+
+    </div>
+    <!--/.Card-->
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+</div>
+

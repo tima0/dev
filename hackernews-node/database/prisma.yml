@@ -1,0 +1,15 @@
+# The service name, this will be part of the endpoint of the Prism API
+service: hackernews-node
+
+# The deployment stage, this will also be part of the API endpoint
+stage: dev
+
+# Points to the file that hold my data model
+datamodel: datamodel.graphql
+
+# You can only access the API when providing JSTs that are signed with this secret
+secret: mysecret123
+#cluster: public-plumehunter-553/prisma-eu1
+# endpoint: https://eu1.prisma.sh/public-plumehunter-553/hackernews-node/dev
+
+cluster: public-pollenflame-989/prisma-eu1

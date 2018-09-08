@@ -1,0 +1,151 @@
+<!--Double navigation-->
+<header>
+
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+    <!-- Side navigation links -->
+
+
+    <logo>
+      <li>
+        <div class="logo-wrapper waves-ripple">
+          <a href="/dashboards/group">
+            <img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0">
+          </a>
+
+        </div>
+      </li>
+    </logo>
+    <!-- <li> -->
+    <links>
+
+      <ul class="collapsible collapsible-accordion">
+
+        <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+          <mdb-item>
+            <mdb-item-head mdbRippleRadius class="black border border-white border-right-0 border-left-0 text-white">
+              <i class="fa fa-user-circle text-white"> Member</i>
+            </mdb-item-head>
+            <mdb-item-body class="grey">
+              <ul>
+                <li>
+                  <a routerLink="/member/member-profile" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>My Profile</a>
+                </li>
+                <li>
+                  <a routerLink="/member/message-center" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Message Center</a>
+                </li>
+                <li>
+                  <a routerLink="/pages/login" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Log Off</a>
+                </li>
+              </ul>
+            </mdb-item-body>
+          </mdb-item>
+          <!-- Simple link -->
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/member/my-plan">
+                <li class="text-black-50 font-weight-bold">My Plans</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/member/claims">
+                <li class="text-black-50 font-weight-bold">Claims</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/member/id-card">
+                <li class="text-black-50 font-weight-bold">ID Card</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/member/find-provider">
+                <li class="text-black-50 font-weight-bold">Find a Provider</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/member/member-resource-center">
+                <li class="text-black-50 font-weight-bold">Resource Center</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+        </mdb-squeezebox>
+      </ul>
+      <!-- </li> -->
+      <!--/. Side navigation links -->
+    </links>
+    <!-- <div class="sidenav"></div> -->
+  </mdb-sidenav>
+  <!--/. Sidebar navigation -->
+
+  <!--/. Navbar -->
+  <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <logo>
+      <!-- <img src="../../../../assets/img/favicon-32x32.png">  -->
+    </logo>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbRippleRadius>
+            <i class="fa fa-envelope"></i>
+            <span class="clearfix d-none d-sm-inline-block"></span>
+          </a>
+        </li>
+
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->
+
+
+
+
+<section class="section d-flex justify-content-center">
+  <div>
+    <img src="../../../../assets/img/providersearchfilter.png" class="img-responsive">
+  </div>
+</section>
+<div>
+  <div class="card-body text-center">
+    <agm-map [latitude]="lat" [longitude]="lng" [mapTypeId]="'roadmap'" style="height: 300px">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+
+  </div>
+</div>
+
+<!-- Default form contact -->
+<section class="section d-flex justify-content-center">
+  <div>
+    <img src="../../../../assets/img/providersearch.png" class="img-responsive">
+  </div>
+</section>
+<!-- Default form contact -->

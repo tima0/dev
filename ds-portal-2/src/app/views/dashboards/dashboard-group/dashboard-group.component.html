@@ -1,0 +1,261 @@
+<!--Double navigation-->
+<header>
+
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+    <!-- Side navigation links -->
+
+
+    <logo>
+      <li>
+        <div class="logo-wrapper waves-ripple">
+          <a href="/dashboards/group">
+            <img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0">
+          </a>
+
+        </div>
+      </li>
+    </logo>
+    <!-- <li> -->
+    <links>
+
+      <ul class="collapsible collapsible-accordion">
+
+        <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+          <mdb-item>
+            <mdb-item-head mdbRippleRadius class="black border border-white border-right-0 border-left-0 text-white">
+              <i class="fa fa-user-circle text-white"> Group</i>
+            </mdb-item-head>
+            <mdb-item-body class="grey">
+              <ul>
+                <li>
+                  <a routerLink="/group/group-profile" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>My Profile</a>
+                </li>
+                <li>
+                  <a routerLink="/group/message-center" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Message Center</a>
+                </li>
+                <li>
+                  <a routerLink="/pages/login" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Log Off</a>
+                </li>
+              </ul>
+            </mdb-item-body>
+          </mdb-item>
+          <!-- Simple link -->
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-details">
+                <li class="text-black-50 font-weight-bold">Group Details</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/plans">
+                <li class="text-black-50 font-weight-bold">Plans</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/enrollment">
+                <li class="text-black-50 font-weight-bold">Enrollment</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/billing">
+                <li class="text-black-50 font-weight-bold">Billing</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/group-docs">
+                <li class="text-black-50 font-weight-bold">Group Docs</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/subgroups">
+                <li class="text-black-50 font-weight-bold">Subgroups</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+          <mdb-item class="no-collase">
+            <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+              <a routerLink="/group/resource-center">
+                <li class="text-black-50 font-weight-bold">Resource Center</li>
+              </a>
+            </mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+          </mdb-item>
+        </mdb-squeezebox>
+      </ul>
+      <!-- </li> -->
+      <!--/. Side navigation links -->
+    </links>
+    <!-- <div class="sidenav"></div> -->
+  </mdb-sidenav>
+  <!--/. Sidebar navigation -->
+
+  <!--/. Navbar -->
+  <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <logo>
+      <!-- <img src="../../../../assets/img/favicon-32x32.png">  -->
+    </logo>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbRippleRadius>
+            <i class="fa fa-envelope"></i>
+            <span class="clearfix d-none d-sm-inline-block"></span>
+          </a>
+        </li>
+
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->
+
+
+<!--Section: Quick Search v.1-->
+<section class="section search-section pb-3">
+  <div class="row">
+    <div class="col-md-12 mb-r">
+      <div class="card search">
+        <div class="card-body d-inline-flex">
+          <h4 class="font-weight-bold pt-3 pr-5 pl-2">Quick Search</h4>
+          <form method="post" class="d-flex-end">
+            <input type="text" class="textbox" placeholder="Member Name or SSN">
+            <input title="Search" value="" type="submit" class="button">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Section: Info v.1-->
+<section class="section info-section pb-3">
+
+  <!--Grid row-->
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-lg-6 col-md-12 mb-r">
+      <!--Panel-->
+      <div class="card card-body panel d-flex align-items-center">
+        <h3 class="card-title font-weight-bold justify-content-center">Manage Subscribers</h3>
+
+      </div>
+      <!--/.Panel-->
+    </div>
+
+    <!--Grid column-->
+    <div class="col-lg-6 col-md-12 mb-r">
+      <!--Panel-->
+      <div class="card card-body panel d-flex align-items-center">
+        <h4 class="card-title font-weight-bold justify-content-center">Your Most Recent Invoice</h4>
+        <h4 class="card-text mt-3 mb-4">due.total</h4>
+        <div class="flex-row">
+          <div class="col">
+            <p class="d-flex justify-content-start">due.date</p>
+          </div>
+        </div>
+        <div>
+          <a class="btn btn-teal" href="https://www.dentalselect.com/autopayment.php?oOPdh7c2MctiWp6=t0TR47pD6676Wk9G2E41" target="_blank">Pay Now</a>
+        </div>
+      </div>
+      <!--/.Panel-->
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!--Section: Team v.3-->
+<section class="section team-section pb-3">
+
+
+  <!--Grid row-->
+  <div class="row mb-lg-4 center-on-small-only">
+
+    <!--Grid column-->
+    <div class="col-lg-6 col-md-12 mb-r">
+      <div class="card">
+        <div class="card-body">
+          <div class="col-md-6 float-left">
+            <div class="avatar">
+              <img src="../../../../assets/img/Courtney-Rider.jpg" class="rounded-circle img-responsive z-depth-1" alt="Fourth sample avatar image">
+            </div>
+          </div>
+
+          <div class="col-md-6 float-right">
+            <h4>
+              <strong>Courtney Rider</strong>
+            </h4>
+            <h6 class="font-bold grey-text mb-4">Sales Representative</h6>
+            <p class="grey-text">courtneyr@dentalselect.com</p>
+            <p class="grey-text">512-343-2616</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Grid column-->
+    <div class="col-lg-6 col-md-12 mb-r">
+      <div class="card">
+        <div class="card-body">
+          <div class="col-md-6 float-left">
+            <div class="avatar">
+              <img src="../../../../assets/img/Hope-Eastman.jpg" class="rounded-circle img-responsive z-depth-1" alt="Second sample avatar image">
+            </div>
+          </div>
+
+          <div class="col-md-6 float-right">
+            <h4>
+              <strong>Hope Eastman</strong>
+            </h4>
+            <h6 class="font-bold grey-text mb-4">Account Manager</h6>
+            <p class="grey-text">hopee@dentalselect.com</p>
+            <p class="grey-text">801-555-2616</p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Grid column -->
+
+  </div>
+  <!--Grid row-->
+
+
+
+</section>
+<!--Section: Team v.3-->

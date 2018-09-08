@@ -1,0 +1,53 @@
+{
+  "plugins": [
+    "flowtype",
+    "flowtype-errors"
+  ],
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {},
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }
+    }
+  },
+  "rules": {
+    // Plugins
+    "import/prefer-default-export": "off",
+
+    "flowtype-errors/show-errors": "error",
+    "flowtype-errors/show-warnings": "warn",
+    "flowtype-errors/enforce-min-coverage": ["error", 50],
+
+    // Possible Errors
+
+    // Best Practices
+
+    // Variables
+
+    // no-restricted-globals
+
+    // Node.js and CommonJS
+
+    // Stylistic Issues
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-underscore-dangle": "off"
+
+    // JS.Next
+  }
+}

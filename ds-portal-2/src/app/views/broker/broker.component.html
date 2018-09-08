@@ -1,0 +1,118 @@
+<!--Double navigation-->
+<header>
+
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+    <!-- Side navigation links -->
+    <links>
+      <li>
+        <ul class="collapsible collapsible-accordion">
+          <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+            <logo>
+              <li>
+                <div class="logo-wrapper waves-light">
+                  <a href="/dashboards/broker">
+                    <img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0">
+                  </a>
+                </div>
+              </li>
+            </logo>
+
+            <mdb-item>
+              <mdb-item-head mdbRippleRadius class="text-white border border-gray border-right-0 border-left-0">
+                <i class="fa fa-user-circle"></i> MARCUS REECE
+              </mdb-item-head>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a routerLink="/broker/broker-profile" class="waves-effect border border-gray border-right-0 border-left-0" mdbRippleRadius>MY PROFILE</a>
+                  </li>
+                  <li>
+                    <a routerLink="/broker/acount-contact" class="waves-effect border border-gray border-top-0border-right-0 border-left-0" mdbRippleRadius>ACCOUNT CONTACTS</a>
+                  </li>
+                  <li>
+                    <a routerLink="/broker/message-center" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>MESSAGE CENTER</a>
+                  </li>
+                  <li>
+                    <a routerLink="/broker/commissions" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>COMMISSIONS</a>
+                  </li>
+                  <li>
+                    <a routerLink="/broker/license" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>LICENSE</a>
+                  </li>
+                  <li>
+                    <a routerLink="/pages/login" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>LOG OFF</a>
+                  </li>
+                </ul>
+              </mdb-item-body>
+            </mdb-item>
+            <!-- Simple link -->
+            <mdb-item class="no-collase">
+              <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0">
+                <a routerLink="/broker/manage-groups">MANAGE GROUPS</a>
+              </mdb-item-head>
+              <mdb-item-body></mdb-item-body>
+            </mdb-item>
+            <mdb-item class="no-collase">
+              <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0">
+                <a routerLink="/broker/manage-idp">INDIVIDUAL PLANS</a>
+              </mdb-item-head>
+              <mdb-item-body></mdb-item-body>
+            </mdb-item>
+            <mdb-item class="no-collase">
+              <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0">
+                <a routerLink="/broker/renewals">RENEWALS</a>
+              </mdb-item-head>
+              <mdb-item-body></mdb-item-body>
+            </mdb-item>
+            <mdb-item class="no-collase">
+              <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0">
+                <a routerLink="/broker/resource-center">RESOURCE CENTER</a>
+              </mdb-item-head>
+              <mdb-item-body></mdb-item-body>
+            </mdb-item>
+
+          </mdb-squeezebox>
+        </ul>
+      </li>
+      <!--/. Side navigation links -->
+    </links>
+    <!-- <div class="sidenav"></div> -->
+  </mdb-sidenav>
+  <!--/. Sidebar navigation -->
+
+
+
+
+  <!--/. Navbar -->
+  <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <logo>
+      <!-- <img src="../../../../assets/img/favicon-32x32.png">  -->
+    </logo>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbRippleRadius>
+            <i class="fa fa-envelope"></i>
+            <span class="clearfix d-none d-sm-inline-block"></span>
+          </a>
+        </li>
+
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->

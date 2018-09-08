@@ -1,0 +1,29 @@
+.pizzas {
+  margin: 16px;
+}
+
+button[mat-mini-fab] {
+  font-size: 12px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+mat-card {
+  margin-bottom: 15px;
+
+  mat-card-content {
+    .pizza-img {
+      cursor: pointer;
+    }
+  }
+
+  mat-card-actions {
+    padding-left: 16px;
+  }
+}
+
+.pizza-not-found-404 {
+  font-size: 25px;
+  color: grey;
+  text-align: center;
+}

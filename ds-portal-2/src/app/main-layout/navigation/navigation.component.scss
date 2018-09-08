@@ -1,0 +1,33 @@
+:host /deep/ .navbar .navbar-toggler-icon {
+  background-image: url("../../../assets/img/Dental-Select-Logo-440x122.png");
+  cursor: pointer;
+  z-index: 2;
+}
+
+:host /deep/ .navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center cover;
+  background-size: 100% 100%;
+}
+
+:host /deep/ .navbar .breadcrumb-dn {
+  width: 50%;
+}
+
+:host /deep/ ul li.dropdown a.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-wrapper {
+  height: 7vh;
+}
+
+.navbar {
+  z-index: 2;
+}

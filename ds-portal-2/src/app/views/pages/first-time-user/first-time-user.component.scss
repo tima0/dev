@@ -1,0 +1,62 @@
+$introBg: "/assets/img/login-bg.jpg";
+.intro-2 {
+    background: url($introBg) no-repeat center center;
+    background-size: cover;
+}
+
+.card {
+    border-radius: 5%;
+    width: 33vw;
+    // transform: translateY(50%);
+}
+
+.header {
+    background-color: #ffdd15;
+}
+
+.header {
+    background-color: #ffdd15;
+}
+
+.form-simple .font-small {
+    font-size: 0.8rem;
+}
+
+.form-simple .header {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.form-simple input {
+    background-color: #efefef;
+}
+
+.form-simple input[type=email]:focus:not([readonly]) {
+    border: none;
+    box-shadow: none;
+}
+
+.form-simple input[type=email]:focus:not([readonly])+label {
+    // @include transition(.2s ease-out);
+    color: #666666;
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    font-size: 1rem;
+    cursor: text;
+}
+
+.form-simple input[type=password]:focus:not([readonly]) {
+    border: none;
+    box-shadow: none;
+}
+
+.form-simple input[type=password]:focus:not([readonly])+label {
+    color: #666666;
+    border-radius: 3px;
+}
+
+.intro {
+    min-height: 100vh;
+    position: relative;
+}

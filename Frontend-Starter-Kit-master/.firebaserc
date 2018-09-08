@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "development": "web-go-demo",
+    "production": "web-go-demo"
+  }
+}

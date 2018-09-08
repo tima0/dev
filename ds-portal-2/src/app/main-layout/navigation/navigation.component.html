@@ -1,0 +1,144 @@
+<!--Double navigation-->
+<header>
+
+    <!-- Sidebar navigation -->
+    <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+        <!-- Side navigation links -->
+
+
+        <logo>
+            <li>
+                <div class="logo-wrapper waves-ripple">
+                    <a href="/dashboards/broker">
+                        <img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0">
+                    </a>
+
+                </div>
+            </li>
+        </logo>
+        <!-- <li> -->
+        <links>
+
+            <ul class="collapsible collapsible-accordion">
+
+                <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+                    <mdb-item>
+                        <mdb-item-head mdbRippleRadius class="border border-white border-top-0 border-right-0 border-left-0">
+                            <li class="fa fa-user-circle text-black-50 font-weight-bold">  broker.name </li>
+                        </mdb-item-head>
+                        <mdb-item-body class="grey">
+                            <ul>
+                                <li>
+                                    <a routerLink="/broker/broker-profile" class="border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Account</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/account-contact" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Account Contacts</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/message-center" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Message Center</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/commissions" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Commissions</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/license" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>License</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/pages/login" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Log Off</a>
+                                </li>
+                            </ul>
+                        </mdb-item-body>
+                    </mdb-item>
+                    <mdb-item>
+                        <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+                            <a routerLink="/broker/manage-groups">
+                                <li class="text-black-50 font-weight-bold">Manage Groups</li>
+                            </a>
+                        </mdb-item-head>
+                        <mdb-item-body class="grey">
+                            <ul>
+                                <li>
+                                    <a routerLink="/broker/group-details" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Group Details</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/plans" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Plans</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/enrollment" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Enrollment</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/billing" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Billing</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/group-docs" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Group Docs</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/broker/subgroups" class="waves-effect border border-white border-top-0 border-right-0 border-left-0" mdbRippleRadius>Subgroups</a>
+                                </li>
+                            </ul>
+                        </mdb-item-body>
+                    </mdb-item>
+                    <!-- Simple link -->
+                    <mdb-item class="no-collase">
+                        <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+                            <a routerLink="/broker/manage-idp">
+                                <li class="text-black-50 font-weight-bold">Individual Plans</li>
+                            </a>
+                        </mdb-item-head>
+                        <mdb-item-body></mdb-item-body>
+                    </mdb-item>
+                    <mdb-item class="no-collase">
+                        <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+                            <a routerLink="/broker/renewals">
+                                <li class="text-black-50 font-weight-bold">Renewals</li>
+                            </a>
+                        </mdb-item-head>
+                        <mdb-item-body></mdb-item-body>
+                    </mdb-item>
+                    <mdb-item class="no-collase">
+                        <mdb-item-head mdbRippleRadius class="border border-white border-right-0 border-top-0 border-left-0">
+                            <a routerLink="/broker/resource-center">
+                                <li class="text-black-50 font-weight-bold">Resource Center</li>
+                            </a>
+                        </mdb-item-head>
+                        <mdb-item-body></mdb-item-body>
+                    </mdb-item>
+                </mdb-squeezebox>
+            </ul>
+            <!-- </li> -->
+            <!--/. Side navigation links -->
+        </links>
+        <!-- <div class="sidenav"></div> -->
+    </mdb-sidenav>
+    <!--/. Sidebar navigation -->
+
+    <!--/. Navbar -->
+    <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+        <navlinks class="navbar-container">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a (click)="sidenav.show()" class="button-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <!--/. SideNav slide-out button -->
+        </navlinks>
+
+        <navlinks>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbRippleRadius>
+                        <i class="fa fa-envelope"></i>
+                        <span class="clearfix d-none d-sm-inline-block"></span>
+                    </a>
+                </li>
+
+            </ul>
+        </navlinks>
+    </mdb-navbar>
+    <!--/. Navbar -->
+
+</header>
+<!--/.Double navigation-->

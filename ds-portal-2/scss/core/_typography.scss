@@ -1,0 +1,133 @@
+// Typography
+// basis-grotesque FONT
+// @font-face {
+//   font-family: "basis-grotesque";
+//   src: local(basis-grotesque Thin),
+//     url('#{$basis-grotesque-font-path}basis-grotesque-Thin.eot');
+//   src: url("#{$basis-grotesque-font-path}basis-grotesque-Thin.eot?#iefix") format('embedded-opentype'),
+//     url("#{$basis-grotesque-font-path}basis-grotesque-Thin.woff2") format("woff2"),
+//     url("#{$basis-grotesque-font-path}basis-grotesque-Thin.woff") format("woff"),
+//     url("#{$basis-grotesque-font-path}basis-grotesque-Thin.ttf") format("truetype");
+//   font-weight: 200;
+// }
+// @font-face {
+//   font-family: "basis-grotesque";
+//   src: local(basis-grotesque mono),
+//     url('#{$basis-grotesque-font-path}basis-grotesque-mono.eot');
+//   src: url("#{$basis-grotesque-font-path}basis-grotesque-mono.eot?#iefix") format('embedded-opentype'),
+//     url("#{$basis-grotesque-font-path}basis-grotesque-mono.woff2") format("woff2"),
+//     url("#{$basis-grotesque-font-path}basis-grotesque-mono.woff") format("woff"),
+//     url("#{$basis-grotesque-font-path}basis-grotesque-mono.ttf") format("truetype");
+//   font-weight: 300;
+// }
+@font-face {
+  font-family: "basis-grotesque";
+  src: local(basis-grotesque regular),
+  url('#{$basis-grotesque-font-path}basis-grotesque-regular.eot');
+  src: url("#{$basis-grotesque-font-path}basis-grotesque-regular.eot?#iefix") format('embedded-opentype'),
+  url("#{$basis-grotesque-font-path}basis-grotesque-regular.woff2") format("woff2"),
+  url("#{$basis-grotesque-font-path}basis-grotesque-regular.woff") format("woff"),
+  url("#{$basis-grotesque-font-path}basis-grotesque-regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "basis-grotesque";
+  src: url('#{$basis-grotesque-font-path}basis-grotesque-medium.eot');
+  src: url("#{$basis-grotesque-font-path}basis-grotesque-medium.eot?#iefix") format('embedded-opentype'),
+  url("#{$basis-grotesque-font-path}basis-grotesque-medium.woff2") format("woff2"),
+  url("#{$basis-grotesque-font-path}basis-grotesque-medium.woff") format("woff"),
+  url("#{$basis-grotesque-font-path}basis-grotesque-medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "basis-grotesque";
+  src: url('#{$basis-grotesque-font-path}basis-grotesque-bold.eot');
+  src: url("#{$basis-grotesque-font-path}basis-grotesque-bold.eot?#iefix") format('embedded-opentype'),
+  url("#{$basis-grotesque-font-path}basis-grotesque-bold.woff2") format("woff2"),
+  url("#{$basis-grotesque-font-path}basis-grotesque-bold.woff") format("woff"),
+  url("#{$basis-grotesque-font-path}basis-grotesque-bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  font-family: 'basis-grotesque';
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+// Responsive headings
+@each $key, $val in $grid-breakpoints {
+  @include media-breakpoint-up($key) {
+    $y: map-get($responsive-headings, $key);
+    @each $name,
+      $value in $y {
+      .#{$name}-responsive {
+        font-size: $value;
+      }
+    }
+  }
+}
+
+// Divider
+.divider-new {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: $divider-margin-y;
+  margin-bottom: $divider-margin-y;
+  > h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+  }
+  &:before,
+  &:after {
+    content: "";
+    height: 1.5px;
+    flex: 1;
+    height: $divider-height;
+    background: #c6c6c6;
+  }
+  &:before {
+    margin: 0 $divider-margin-x 0 0;
+  }
+  &:after {
+    margin: 0 0 0 $divider-margin-x;
+  }
+}
+
+// Blockquote
+.blockquote {
+  padding: $blockquote-padding-y $blockquote-padding-x;
+  border-left: .25rem solid #eceeef;
+  .bq-title {
+    margin-bottom: 0;
+    font-size: $font-size-large;
+    font-weight: 400;
+  }
+  p {
+    padding: $blockquote-p-padding-t 0 $blockquote-p-padding-b $blockquote-p-padding-l;
+    font-size: $blockquote-p-font-size;
+  }
+}
+
+@each $name, $color in $basic {
+  .bq-#{$name} {
+    border-left: 3px solid $color !important;
+    .bq-title {
+      color: $color !important;
+    }
+  }
+}
+
+@each $name, $color in $basic-mdb-colors {
+  @include text-emphasis-variant(".text-#{$name}", $color);
+}
+
+.font-small {
+  font-size: $font-small;
+}

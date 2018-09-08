@@ -1,0 +1,11 @@
+$introBg: "/assets/img/login-bg.jpg";
+
+.intro-2 {
+    background: url($introBg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro {
+    min-height: 100vh;
+    position: relative;
+}

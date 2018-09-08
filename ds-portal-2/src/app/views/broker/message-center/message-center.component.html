@@ -1,0 +1,39 @@
+<div class="col-md-12">
+
+
+  <!--Card-->
+  <div class="card card-cascade">
+
+    <!--Card image-->
+    <div class="card-header grey">
+      <h4 class="d-flex justify-content-center text-white">MESSAGE CENTER</h4>
+    </div>
+    <!--/Card image-->
+
+    <!--Card content-->
+    <div class="card-body text-center">
+
+      <!--Accordion wrapper-->
+      <mdb-squeezebox [multiple]="false" aria-multiselectable="true">
+        <mdb-item *ngFor="let item of itemsList">
+          <mdb-item-head> {{ item.title }} </mdb-item-head>
+          <mdb-item-body> {{ item.description }} </mdb-item-body>
+        </mdb-item>
+      </mdb-squeezebox>
+      <!--/.Accordion wrapper-->
+
+
+
+    </div>
+    <!--/.Card content-->
+
+  </div>
+  <!--/.Card-->
+
+
+
+
+
+
+
+</div>

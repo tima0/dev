@@ -1,0 +1,137 @@
+  <!--Section: Quick Search v.1-->
+  <section class="section search-section pb-3">
+    <div class="row">
+      <div class="col-12 mb-r">
+        <div class="card">
+          <div class="card-body d-inline-flex">
+            <h4 class="font-weight-bold pt-3 pr-5 pl-2">Quick Search</h4>
+            <form method="post" class="d-flex-end">
+              <input type="text" class="textbox" placeholder="Member Name or SSN">
+              <input title="Search" value="" type="submit" class="button">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Section: Group Table v.1-->
+  <!--Top Table UI-->
+
+  <div [ngClass]="{ 'card card-cascade narrower': true, 'z-depth-0': !shadows }">
+    <div class="px-4">
+
+      <div class="table-wrapper">
+        <div class="p-3">
+          <div class="row d-flex">
+            <h2>Individual Dental Plans</h2>
+            <div class="col d-flex justify-content-end">
+
+            <div class="add term">
+              <a class="btn btn-rounded teal">Add a New Member</a>
+              <a class="btn btn-rounded btn-outline-teal">Term a Member</a>
+            </div>
+            </div>
+          </div>
+          <div class="row p-2">
+            <h5>Show</h5>
+            <!-- Small button group -->
+            <div class="btn-group pl-2" dropdown>
+              <button dropdownToggle class="btn btn-outline-grey btn-sm dropdown-toggle" type="button">
+                Groups
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">Active</a>
+                <a class="dropdown-item" href="#">Termed</a>
+              </div>
+            </div>
+          </div>
+          <div class="download d-flex justify-content-end">
+            <img src="../../../../assets/img/icon-download-cloud.png">
+          </div>
+          <!--Table-->
+          <table class="table table-hover mb-0">
+
+            <!--Table head-->
+            <thead>
+              <tr>
+                <th>
+                  <input type="checkbox" id="checkbox">
+                  <label for="checkbox" class="mr-2 label-table"></label>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('last')">
+                    <strong>LAST NAME</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('first')">
+                    <strong>FIRST NAME</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('memberId')">
+                    <strong>MEMBER ID</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('effective')">
+                    <strong>EFFECTIVE</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('renewal')">
+                    <strong>RENEWAL</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('dependents')">
+                    <strong>DEPENDENTS</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('status')">
+                    <strong>STATUS</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+                <th class="th-lg font-bold">
+                  <a (click)="sortBy('termDate')">
+                    <strong>TERM DATE</strong>
+                    <i class="fa fa-sort ml-1"></i>
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <!--Table head-->
+
+            <!--Table body-->
+            <tbody>
+              <tr *ngFor="let row of tableData;let i = index">
+                <th scope="row">
+                  <input type="checkbox" id="checkbox{{i}}">
+                  <label for="checkbox{{i}}" class="label-table"></label>
+                </th>
+                <td>{{row.last}}</td>
+                <td>{{row.first}}</td>
+                <td>{{row.memberId}}</td>
+                <td>{{row.effective}}</td>
+                <td>{{row.renewal}}</td>
+                <td>{{row.dependents}}</td>
+                <td>{{row.status}}</td>
+                <td>{{row.termDate}}</td>
+              </tr>
+            </tbody>
+            <!--Table body-->
+          </table>
+          <!--Table-->
+        </div>
+      </div>
+    </div>

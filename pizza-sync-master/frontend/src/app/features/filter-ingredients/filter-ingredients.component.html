@@ -1,0 +1,13 @@
+<div class="filter-ingredients">
+  <mat-chip-list>
+    <mat-chip
+      *ngFor="let ingredient of ingredients"
+      [color]="ingredient.isSelected ? 'primary' : ''"
+      [selected]="ingredient.isSelected"
+      (click)="handleClick(ingredient)"
+      [style.opacity]="ingredient.isSelectable ? 1 : 0.5"
+      class="margin-bottom-x1 cursor-pointer">
+      {{ ingredient.name }}
+    </mat-chip>
+  </mat-chip-list>
+</div>

@@ -1,0 +1,282 @@
+<!--Double navigation-->
+<header>
+
+    <!-- Sidebar navigation -->
+    <mdb-sidenav #sidenav class="fixed yellow" [fixed]="true">
+        <!-- Side navigation links -->
+        <links>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+                    <logo>
+                        <li>
+                            <div class="logo-wrapper waves-light">
+                                <a href="/dashboards/broker"><img src="../../../../assets/img/Menu-DS-Home.png" class="img-fluid d-flex p-0"></a>
+                            </div>
+                        </li>
+                    </logo>
+                   
+                    <mdb-item>
+                        <mdb-item-head mdbRippleRadius class="text-white border border-gray border-right-0 border-left-0">
+                            <i class="fa fa-user-circle"></i> MARCUS REECE
+                        </mdb-item-head>
+                        <mdb-item-body>
+                            <ul>
+                                <li>
+                                    <a routerLink="/profiles/profile2" class="waves-effect border border-gray border-right-0 border-left-0" mdbRippleRadius>MY PROFILE</a>
+                                </li>
+                                <li>
+                                    <a routerLink="" class="waves-effect border border-gray border-top-0border-right-0 border-left-0" mdbRippleRadius>ACCOUNT CONTACTS</a>
+                                </li>
+                                <li>
+                                    <a routerLink="" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>MESSAGE CENTER</a>
+                                </li>
+                                <li>
+                                    <a routerLink="" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>COMMISSIONS</a>
+                                </li>
+                                <li>
+                                    <a routerLink="" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>LICENSE</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/pages/login" class="waves-effect border border-gray border-top-0 border-right-0 border-left-0" mdbRippleRadius>LOG OFF</a>
+                                </li>
+                            </ul>
+                        </mdb-item-body>
+                    </mdb-item>
+                   <!-- Simple link -->
+                    <mdb-item class="no-collase">
+                        <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0"><a routerLink="/tables/table1">MANAGE GROUPS</a></mdb-item-head>
+                        <mdb-item-body></mdb-item-body>
+                    </mdb-item>
+                    <mdb-item class="no-collase">
+                        <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0"><a routerLink="/tables/table2">INDIVIDUAL PLANS</a></mdb-item-head>
+                        <mdb-item-body></mdb-item-body>
+                    </mdb-item>
+                    <mdb-item class="no-collase">
+                        <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0"><a routerLink="/settings/settings1">RENEWALS</a></mdb-item-head>
+                        <mdb-item-body></mdb-item-body>
+                    </mdb-item>
+                    <mdb-item class="no-collase">
+                        <mdb-item-head mdbRippleRadius class="border border-gray border-right-0 border-top-0 border-left-0"><a routerLink="/settings/settings2">RESOURCE CENTER</a></mdb-item-head>
+                        <mdb-item-body></mdb-item-body>
+                    </mdb-item>
+                                
+                </mdb-squeezebox>
+            </ul>
+        </li>
+        <!--/. Side navigation links -->
+    </links>
+    <!-- <div class="sidenav"></div> -->
+    </mdb-sidenav>
+    <!--/. Sidebar navigation -->
+
+
+
+     
+        <!--/. Navbar -->
+        <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav blue-grey" [containerInside]="false">
+
+                <navlinks class="navbar-container">
+                    <!-- SideNav slide-out button -->
+                    <div class="float-left">
+                        <a (click)="sidenav.show()" class="button-collapse"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <!--/. SideNav slide-out button -->
+                </navlinks>
+            
+                <logo>
+                   <!-- <img src="../../../../assets/img/favicon-32x32.png">  -->
+                </logo>   
+            
+                <navlinks>
+                    <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+                        <li class="nav-item">
+                        <a class="nav-link waves-light" mdbRippleRadius><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block"></span></a>
+                    </li>
+                
+                    </ul>
+                </navlinks>
+                </mdb-navbar>
+                    <!--/. Navbar -->
+            
+            </header>
+            <!--/.Double navigation-->
+<div class="row">
+    <div class="col-md-8">
+
+        <!--Card-->
+        <div class="card card-cascade narrower">
+
+            <!--Card image-->
+            <div class="view gradient-card-header light-blue lighten-1">
+                <h4 class="h4-responsive">Edit your profile:</h4>
+            </div>
+            <!--/Card image-->
+
+            <!--Card content-->
+            <div class="card-body text-center">
+
+                <form>
+
+                    <!--First row-->
+                    <div class="row">
+                        <!--First column-->
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input placeholder="johnDoe78" [disabled]='true' type="text" id="form11" class="form-control">
+                                <label class="active disabled" for="form11">Username (can't be changed)</label>
+                            </div>
+                        </div>
+
+                        <!--Second column-->
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input placeholder="John" type="text" id="form12" class="form-control">
+                                <label class="active" for="form12">First Name</label>
+                            </div>
+                        </div>
+
+                        <!--Third column-->
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input placeholder="Doe" type="text" id="form13" class="form-control">
+                                <label class="active" for="form13">Last Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.First row-->
+
+                    <!--Second row-->
+                    <div class="row">
+                        <!--First column-->
+                        <div class="col-md-6">
+                            <div class="md-form">
+                                <input placeholder="" mdbActive type="text" id="form21" class="form-control">
+                                <label for="form21">Address line 1</label>
+                            </div>
+                        </div>
+
+                        <!--Second column-->
+                        <div class="col-md-6">
+                            <div class="md-form">
+                                <input placeholder="" mdbActive type="text" id="form22" class="form-control">
+                                <label for="form22">Address line 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Second row-->
+
+                    <!--Third row-->
+                    <div class="row">
+                        <!--First column-->
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input placeholder="New York" type="text" id="form31" class="form-control">
+                                <label class="active" for="form31">City</label>
+                            </div>
+                        </div>
+
+                        <!--Second column-->
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input placeholder="00432" type="text" id="form32" class="form-control">
+                                <label class="active" for="form32">Postcode</label>
+                            </div>
+                        </div>
+
+                        <!--Third column-->
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input type="text" mdbActive id="form33" class="form-control">
+                                <label for="form33">Country</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Third row-->
+
+                    <!--Fourth row-->
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <textarea mdbActive type="text" id="form76" class="md-textarea">Lorem</textarea>
+                                <label for="form76">Bio</label>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!--/.Fourth row-->
+
+                    <div class="text-center">
+                        <button type="button" class="btn blue-gradient btn-rounded waves-light" mdbRippleRadius>Update</button>
+                    </div>
+
+                </form>
+                <!--Contact Form-->
+
+
+
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+
+
+
+    </div>
+    <div class="col-md-4">
+
+        <!--Section: Team v.2-->
+        <section class="section team-section pb-3">
+
+            <div class="row text-center">
+
+
+                    <div class="col-md-12">
+                      <!--Card-->
+                      <div class="card card-cascade narrower ">
+                        <!--Card image-->
+                        <div class="view gradient-card-header blue-gradient">
+                            <h4 class="h4-responsive">Bio: </h4>
+                        </div>
+                        <!--/Card image-->
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <div class="avatar">
+                                <img src="../../../../assets/img/Jeff-VanLeeuwen.jpg" class="z-depth-1" alt="First sample avatar image">
+                            </div>
+                            <h4>Broker</h4>
+                            <h5>Insurance Broker</h5>
+        
+                            <!--Facebook-->
+                            <a type="button" class="btn-floating btn-small btn-fb waves-light" mdbRippleRadius>
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <!--Dribbble-->
+                            <a type="button" class="btn-floating btn-small btn-dribbble waves-light" mdbRippleRadius>
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                            <!--Twitter-->
+                            <a type="button" class="btn-floating btn-small btn-tw waves-light" mdbRippleRadius>
+                                <i class="fa fa-twitter"></i>
+                            </a>
+        
+                        </div>
+                        <!--/.Card content-->
+                      </div>
+                      <!--/.Card-->
+                  </div>
+                  
+
+
+
+   
+            </div>
+        </section>
+        <!--Section: Team v.2-->
+
+    </div>
+</div>
